@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Android Broadcast App</string>
+    <string name="type_message_to_send">Type message to broadcast</string>
+    <string name="broadcast">Broadcast</string>
+    <string name="simple_broadcast">SIMPLE_BROADCAST</string>
+    <string name="message_sent">Message sent!</string>
+    <string name="empty_string" />
+</resources>
