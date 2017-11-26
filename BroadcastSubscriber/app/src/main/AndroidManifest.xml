@@ -16,6 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <receiver
+            android:name="pl.devone.android.broadcastsubscriber.broadcast.BroadcastMessageReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="pl.devone.android.broadcastpublisher.SIMPLE_BROADCAST" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

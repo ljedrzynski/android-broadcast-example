@@ -14,11 +14,11 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(pl.devone.androidbroadcastapp.R.layout.activity_main);
+        setContentView(R.layout.activity_main);
 
-        final EditText etMessage = findViewById(pl.devone.androidbroadcastapp.R.id.etMessage);
+        final EditText etMessage = findViewById(R.id.et_msg);
 
-        Button btnBroadcast = findViewById(pl.devone.androidbroadcastapp.R.id.btnBroadcast);
+        Button btnBroadcast = findViewById(R.id.btn_broadcast);
         btnBroadcast.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -26,14 +26,14 @@ public class MainActivity extends Activity {
 
                 if (!TextUtils.isEmpty(msg)) {
                     Intent intent = new Intent();
-                    intent.setAction(this.getClass().getPackage() + getString(pl.devone.androidbroadcastapp.R.string.simple_broadcast));
+                    intent.setAction(this.getClass().getPackage().getName() + "." + getString(R.string.simple_broadcast));
                     intent.putExtra("msg", msg);
                     sendBroadcast(intent);
 
-                    etMessage.setText(pl.devone.androidbroadcastapp.R.string.empty_string);
+                    etMessage.setText(R.string.empty_string);
                     etMessage.clearFocus();
 
-                    Snackbar.make(findViewById(pl.devone.androidbroadcastapp.R.id.rlMain), pl.devone.androidbroadcastapp.R.string.message_sent, Snackbar.LENGTH_SHORT).show();
+                    Snackbar.make(findViewById(R.id.rl_main_act), R.string.message_sent, Snackbar.LENGTH_SHORT).show();
                 }
             }
         });
