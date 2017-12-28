@@ -17,5 +17,17 @@
             </intent-filter>
         </activity>
     </application>
+    <permission-group android:name="pl.devone.android.PERMISSION_GROUP"
+        android:label="PERMISSION_GROUP">
+    </permission-group>
+
+    <permission android:name="pl.devone.android.BROADCAST_PERMISSION"
+        android:permissionGroup="pl.devone.android.PERMISSION_GROUP"
+        android:label="BROADCAST_PERMISSION">
+    </permission>
+
+    <uses-permission android:name="pl.devone.android.BROADCAST_PERMISSION">
+    </uses-permission>
+
 
 </manifest>

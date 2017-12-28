@@ -18,11 +18,15 @@
         </activity>
         <receiver
             android:name="pl.devone.android.broadcastsubscriber.broadcast.BroadcastMessageReceiver"
-            android:exported="true">
+            android:exported="true"
+            android:permission="pl.devone.android.BROADCAST_PERMISSION">
             <intent-filter>
                 <action android:name="pl.devone.android.broadcastpublisher.SIMPLE_BROADCAST" />
             </intent-filter>
         </receiver>
+
+
+
     </application>
 
 </manifest>
